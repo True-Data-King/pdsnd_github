@@ -146,7 +146,7 @@ def trip_duration_stats(df):
     print('The average travel time is ' + mean_travel_time + ' seconds.')
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def user_stats(df):
@@ -176,7 +176,7 @@ def user_stats(df):
         print('The most common customer birth year is ' + str(most_common))
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    print('-'*40)
+    print('-'*50)
 
 
 def main():
