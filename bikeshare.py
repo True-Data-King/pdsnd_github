@@ -42,7 +42,7 @@ def get_filters():
     day_list = ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday')
     day_prompt = 'What day would you like to view data for? (type in a choice from the list below)\n [all, Mon, Tue, Wed, Thu, Fri, Sat]\n'
     while True:
-         #Check if the input is valid before running the rest of the program
+         #Check if the input is valid before running the rest of the program to ensure proper data collection
         day = input(day_prompt)
         if day.lower() in day_list:
             break
