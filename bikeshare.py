@@ -11,13 +11,12 @@ def get_filters():
     Asks user to specify a city, month, and day to analyze.
 
     Returns:
-        (str) city - name of the city to analyze
-        (str) month - name of the month to filter by, or "all" to apply no month filter
-        (str) day - name of the day of week to filter by, or "all" to apply no day filter
+        (str) city  - name of the city to analyze
+        (str) month  - name of the month to filter by, or "all" to apply no month filter
+        (str) day  - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-   
+    # get user input for city (chicago, new york city or washington). HINT: Use a while loop to handle invalid inputs
     while True:
         #Check if the input is valid before running the rest of the program
         city = input('Would you like to view data for chicago, new york city or washington?\n')
@@ -27,7 +26,7 @@ def get_filters():
             print('\nYou haven\'t entered a valid city name')
 
 
-    # get user input for month (all, january, february, ... , june)
+    # get user input for month (all, january, february, march, april, may , june)
     month_list = ('all', 'january', 'february', 'march', 'april', 'may', 'june')
     month_prompt = 'What month would you like to view data for? (type in a choice from the list below)\n [all, january, february, march, april, may, june]\n'
    
@@ -45,7 +44,7 @@ def get_filters():
     day_prompt = 'What day would you like to view data for? (type in a choice from the list below)\n [all, Mon, Tue, Wed, Thu, Fri, Sat]\n'
    
     while True:
-         #Check if the input is valid before running the rest of the program
+         #Check if the input is valid before running the rest of the program to ensure proper data collection
         day = input(day_prompt)
         if day.lower() in day_list:
             break
