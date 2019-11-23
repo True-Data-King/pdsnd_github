@@ -17,6 +17,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
+   
     while True:
         #Check if the input is valid before running the rest of the program
         city = input('Would you like to view data for chicago, new york city or washington?\n')
@@ -29,6 +30,7 @@ def get_filters():
     # get user input for month (all, january, february, ... , june)
     month_list = ('all', 'january', 'february', 'march', 'april', 'may', 'june')
     month_prompt = 'What month would you like to view data for? (type in a choice from the list below)\n [all, january, february, march, april, may, june]\n'
+   
     while True:
          #Check if the input is valid before running the rest of the program
         month = input(month_prompt)
@@ -41,6 +43,7 @@ def get_filters():
     # get user input for day of week (all, monday, tuesday, ... sunday)
     day_list = ('all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday')
     day_prompt = 'What day would you like to view data for? (type in a choice from the list below)\n [all, Mon, Tue, Wed, Thu, Fri, Sat]\n'
+   
     while True:
          #Check if the input is valid before running the rest of the program
         day = input(day_prompt)
@@ -75,6 +78,7 @@ def load_data(city, month, day):
     df['hour'] = df['Start Time'].dt.hour
     
     #Filter the dataframe to contain only the data requested by the user
+   
     if month != 'all':
         df = df[df['month'] == month.title()]
     
